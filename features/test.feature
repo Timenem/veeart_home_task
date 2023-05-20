@@ -1,5 +1,6 @@
 Feature: test
 
+#  "serverUrlBase" is not defined
 Background:
     * def service = 'universal'
     * def sleep = function(pause){ java.lang.Thread.sleep(pause) }
