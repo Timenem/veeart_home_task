@@ -1,9 +1,11 @@
 from test_status_code import  *
-
+import json
 def start_tests():
-    # get_status_code()
+    print(geeks())
 
-    return geeks()
 
-# if __name__ =='__main__':
-start_tests()
+
+
+if __name__ =='__main__':
+    start_tests()
+
