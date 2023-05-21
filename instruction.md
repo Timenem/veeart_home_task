@@ -10,3 +10,7 @@ Before start using karate need install
 3. Install karate 
 <br>` jbang app install --name karate com.intuit.karate:karate-core:RELEASE:all`
 
+
+Run tests 
+<br>`karate features/test_name.feature`
+

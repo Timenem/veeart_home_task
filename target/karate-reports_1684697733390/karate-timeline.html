@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/TestGetMethod[1:7]","start":1684697699549,"end":1684697700312,"title":"features\/TestGetMethod[1:7] 21:34:59.549-21:35:00.312 Get list of users"},{"id":2,"group":1,"content":"features\/TestGetMethod[2:16]","start":1684697700318,"end":1684697700456,"title":"features\/TestGetMethod[2:16] 21:35:00.318-21:35:00.456 Get single user"},{"id":3,"group":1,"content":"features\/TestGetMethod[3:26]","start":1684697700462,"end":1684697700666,"title":"features\/TestGetMethod[3:26] 21:35:00.462-21:35:00.666 Run python file","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
