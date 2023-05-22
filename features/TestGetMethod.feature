@@ -24,12 +24,7 @@ Feature:sample api tests
     And match user_name == 'Michael'
 
   Scenario: Run python file
-#    * def pyfile = karate.exec("python tests/test_runner.py");
     * def result = karate.exec(['python','tests/test_runner.py'])
     * def m = karate.toJson(result)
+    And print karate.env
     And print m.length
-  #    * def ans = karate.extract(result,'Age',1)
-#    And responseStatus 200
-#    Then print status
-
-#    And print response
